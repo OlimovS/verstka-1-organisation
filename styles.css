@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
 problems
 1) flexni qayta organ
 2) team pictures ni tog'irlash slide qo'shish
@@ -10,12 +17,13 @@ media
 2) 1010px for team
 3) 640px for team ----> undone
 4) 530px for inputs
+
+done!
  */
 
 body {
   font-family: OpenSans-Bold,Tahoma,AdobeInvisFont,MyriadPro-Regular;
   overflow-x: hidden;
-  position: relative;
 }
 
 /* ============================ home SECTION ============================================= */
@@ -64,6 +72,8 @@ body {
   border-radius: 3px;
   cursor: pointer;
   letter-spacing: 1px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .contained {
@@ -134,10 +144,14 @@ h2 {
 }
 .topnav .close .first {
   margin-bottom: 10px;
-  transform: translate(7px, 9px) rotate(-45deg);
+  -webkit-transform: translate(7px, 9px) rotate(-45deg);
+      -ms-transform: translate(7px, 9px) rotate(-45deg);
+          transform: translate(7px, 9px) rotate(-45deg);
 }
 .topnav .close .second {
-  transform: translate(7px, -4px) rotate(45deg);
+  -webkit-transform: translate(7px, -4px) rotate(45deg);
+      -ms-transform: translate(7px, -4px) rotate(45deg);
+          transform: translate(7px, -4px) rotate(45deg);
 }
 .overlay {
   position: fixed;
@@ -153,8 +167,12 @@ h2 {
 
 .topnav {
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 501px) {
@@ -173,6 +191,8 @@ h2 {
   display: inline-block;
   padding: 20px;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -185,8 +205,12 @@ h2 {
 }
 /* Home section */
 .homeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 20px;
 }
@@ -213,21 +237,23 @@ h2 {
 
 
 .iframe {
-  /* box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.44),
-              -1px -1px 20px 0px rgba(0, 0, 0, 0.44),
-              -1px 1px 20px 0px rgba(0, 0, 0, 0.44),
-              1px -1px 20px 0px rgba(0, 0, 0, 0.44); */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
 }
 
 /* ============================ services SECTION ============================================= */
 .services {
   background-color: #ddd;
   padding: var(--main-paddings);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .serviceInfo {
@@ -255,10 +281,33 @@ h2 {
 }
 
 .servicesGrid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 20px 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
+}
+
+.servicesGrid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.servicesGrid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.servicesGrid > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.servicesGrid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
 }
 
 .oneService i {
@@ -342,6 +391,8 @@ h2 {
 }
 
 .containerTab {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 15px;
   overflow: hidden;
@@ -361,8 +412,12 @@ h2 {
     outline: none;
   }
   .portfolio .types {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -373,6 +428,8 @@ h2 {
   margin: 0px 5px;
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .portfolio .types a:hover {
@@ -384,9 +441,14 @@ h2 {
 }
 
 .portfolio .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
 }
 
@@ -400,7 +462,8 @@ h2 {
 
 .portfolio .images img.show {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   /* object-position: center; */
 }
 
@@ -441,8 +504,12 @@ h2 {
 }
 
 .aboutTeam {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-bottom: 20px;
 }
 
@@ -455,9 +522,17 @@ h2 {
   padding-right: 20px;
   background-color: rgba(28, 28, 28, 0.75);
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   display: none;
 }
@@ -483,8 +558,12 @@ h2 {
      display: block;
    }
    .scrollImages .members {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     justify-content: center;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
    }
    .scrollImages .members img {
      margin: 3px;
@@ -508,6 +587,8 @@ h2 {
     display: none;
   }
   .scroller {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .scroller a {
@@ -521,6 +602,8 @@ h2 {
     border-radius: 0px 20px 20px 0px;
   }
   .scrollImages {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -528,13 +611,18 @@ h2 {
 .bigImage {
   width: 220px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 250px;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .smallImage {
   width: 150px;
   height: 190px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 
@@ -559,6 +647,8 @@ h2 {
   color: #161616;
   margin-right: 8px;
   border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -590,8 +680,12 @@ h2 {
 }
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .form input {
   margin-right: 10px;
@@ -608,7 +702,8 @@ h2 {
   }
   .form input {
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-bottom: 20px;
   }
   .form .subscribeBtn {
@@ -646,13 +741,21 @@ h2 {
 
 .contact .container {
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contact .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -683,9 +786,15 @@ h2 {
   background-color: #2D2D2D;
   color:  #FFFFFF;
   padding: 30px 20px 40px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 40px;
 }
 .contactInfo p,
@@ -707,7 +816,8 @@ h2 {
     margin: 0px;
   }
   .contact .inputs input {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: block;
     width: 100%;
     margin-bottom: 20px;
@@ -719,15 +829,22 @@ footer {
   background-color: #313030;
   color: #B8B8B8;
   padding: 10px var(--side-padding);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* MEDIA */
 
 @media screen and (max-width: 900px) {
    .homeContent {
-     flex-direction: column;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
      padding-top: 30px;
    }
 
@@ -735,7 +852,9 @@ footer {
      width: auto;
      max-height: 60vh;
 
-     box-shadow: none !important;
+     -webkit-box-shadow: none !important;
+
+             box-shadow: none !important;
    }
    .welcome {
      width: auto;
@@ -746,7 +865,10 @@ footer {
    }
 
    .services {
-     flex-direction: column;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
    }
    .serviceInfo {
      max-width: 100%;
@@ -761,10 +883,14 @@ footer {
     }
    .contact .container {
      margin-top: 40px;
-     flex-direction: column-reverse;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: reverse;
+         -ms-flex-direction: column-reverse;
+             flex-direction: column-reverse;
    }
    .contact .container .contactInfo {
-     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box;
      max-width: none;
      width: 90%;
      margin: 0px auto;
@@ -775,7 +901,8 @@ footer {
    }
    .contact .send textarea {
      width: 100%;
-     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box;
    }
    .contact .diff{
      width: 100%;
