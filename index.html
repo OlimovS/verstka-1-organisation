@@ -11,12 +11,12 @@
   <!--load all styles -->
   <link href="font/css/all.css" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- <script type="text/javascript" src='jquery.js'></script> -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   <script type="text/javascript">
-    window.sr = ScrollReveal({ reset: true });
+    window.sreveal = ScrollReveal({ reset: true });
   </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src='script.js'></script>
   <title>Title</title>
 </head>
@@ -117,9 +117,6 @@
        <img class="show galaxy Toshkent" src="imgs/galaxy.jpg" alt="city">
      </div>
 
-     <!-- <div class="pictures">
-
-     </div> -->
    </section>
 
 
@@ -213,14 +210,14 @@
      </div>
    </footer>
 <script type="text/javascript">
-
-  const abcd = {
-      distance: '40px',
-      origin: 'top',
-      duration: 2000
-  };
-  let scrollElems = [...document.querySelectorAll('.homeContent > *, section:not(.home) > *, footer > *')];
-  sr.reveal(scrollElems, abcd);
+    const sliding = {
+        distance: '40px',
+        origin: 'top',
+        duration: 2000,
+        delay: 250
+    };
+    let scrollElems = document.querySelectorAll('.homeContent > *, section:not(.home) > *, footer > *');
+    sreveal.reveal(scrollElems, sliding);
 </script>
 </body>
 </html>

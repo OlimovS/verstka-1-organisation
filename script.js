@@ -55,15 +55,17 @@ $(document).ready(function() {
 
   // Tabs
   $('.types a').click(function() {
+    // ScrollReveal initing
+    sreveal.delegate();
     $('.types a').removeClass('active');
     $(this).addClass('active')
 
     if($(this).text() !== 'ALL'){
       $('.images img').hide();
-      $(`.${$(this).text()}`).fadeIn(500)
+      $(`.${$(this).text()}`).fadeIn(1000)
     } else {
       $('.images img').hide();
-      $('.images img').fadeIn(500);
+      $('.images img').fadeIn(1000);
     }
 
   })
