@@ -115,7 +115,6 @@ $(document).ready(function() {
 // when page loads
 function workWithLinks() {
   let hash = document.location.hash;
-  console.log(hash)
   if(hash === '' || hash === '#home'){
     $('.topnav a').removeClass('activeLink')
     $('.topnav a[href="#home"]').addClass('activeLink');
